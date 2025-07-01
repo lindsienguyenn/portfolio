@@ -47,6 +47,16 @@
     .narrow-container {
       max-width: 600px;
     }
+
+    .animated-button {
+      transition: all 0.3s ease;
+    }
+
+    .animated-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
   </style>
 </head>
 
@@ -101,7 +111,10 @@
           <strong>Hobbies:</strong> I love traveling (visited over 10 countries). I enjoy cooking, creating video on YouTube and trying new activities like bouldering 🧗 and rowing.
         </p>
         <p>
-       <strong>Technical Skills:</strong> Tableau, Python, SQL </p>
+      <div class="text-center mb-4">
+  <a href="#projects" class="btn btn-warning btn-lg animated-button">View My Work Below</a>
+</div>
+
 
       </div>
      
@@ -241,5 +254,18 @@
     particlesJS('particles-hero', particlesConfigHero);
     particlesJS('particles-contact', particlesConfigContact);
   </script>
+
+  <script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
