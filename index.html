@@ -30,7 +30,7 @@
       color: var(--dark);
       overflow-x: hidden;
       background: var(--white);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     h1, h2, h3, h4, h5 {
@@ -257,6 +257,7 @@
       font-weight: 600;
       margin-bottom: 1.5rem;
       border: 1px solid var(--yellow-primary);
+      text-align: center;
     }
 
     .hero h1 {
@@ -264,6 +265,7 @@
       color: var(--dark);
       margin-bottom: 1.5rem;
       font-weight: 700;
+      text-align: left;
     }
 
     .hero h1 .accent {
@@ -277,6 +279,8 @@
       margin-bottom: 2.5rem;
       max-width: 600px;
       font-weight: 400;
+      text-align: left;
+      line-height: 1.7;
     }
 
     .hero-buttons {
@@ -284,6 +288,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-bottom: 2rem;
+      justify-content: flex-start;
     }
 
     .btn-primary-custom {
@@ -335,6 +340,7 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      justify-content: flex-start;
     }
 
     .hero-social-link {
@@ -396,6 +402,7 @@
       color: var(--gray);
       max-width: 700px;
       margin: 0 auto;
+      line-height: 1.7;
     }
 
     /* About Section */
@@ -465,17 +472,20 @@
       opacity: 0.3;
     }
 
-    .about-text h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-      color: var(--dark);
-    }
-
     .about-text p {
       font-size: 1.05rem;
       line-height: 1.8;
       color: var(--gray);
       margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .about-text h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+      margin-top: 2rem;
+      text-align: left;
     }
 
     .skills-list {
@@ -483,6 +493,7 @@
       flex-wrap: wrap;
       gap: 0.8rem;
       margin: 2rem 0;
+      justify-content: flex-start;
     }
 
     .skill-badge {
@@ -494,6 +505,7 @@
       font-weight: 500;
       color: var(--dark);
       transition: all 0.3s ease;
+      text-align: center;
     }
 
     .skill-badge:hover {
@@ -527,6 +539,8 @@
       font-size: 0.9rem;
       color: var(--gray);
       margin-top: 0.5rem;
+      display: block;
+      text-align: center;
     }
 
     /* Projects Section */
@@ -623,6 +637,7 @@
       margin-bottom: 0.8rem;
       color: var(--dark);
       font-weight: 600;
+      text-align: left;
     }
 
     .project-description {
@@ -630,6 +645,7 @@
       line-height: 1.7;
       margin-bottom: 1.5rem;
       font-size: 0.95rem;
+      text-align: left;
     }
 
     .project-link {
@@ -672,6 +688,7 @@
       color: var(--gray);
       margin-bottom: 2.5rem;
       line-height: 1.8;
+      text-align: center;
     }
 
     .contact-email {
@@ -751,19 +768,20 @@
     @media (max-width: 992px) {
       .about-content {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
       }
 
       .about-image-wrapper {
         margin-bottom: 2rem;
+        text-align: center;
       }
 
       .hero-buttons {
-        justify-content: center;
+        justify-content: flex-start;
       }
 
       .hero-social {
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
 
@@ -771,6 +789,12 @@
       .hero {
         min-height: 70vh;
         padding: 4rem 0 3rem;
+      }
+
+      .hero h1, 
+      .hero .subtitle,
+      .hero-tag {
+        text-align: left;
       }
 
       section {
@@ -788,12 +812,22 @@
       .hero-buttons {
         flex-direction: column;
         width: 100%;
+        align-items: flex-start;
       }
 
       .btn-primary-custom,
       .btn-secondary-custom {
         width: 100%;
         justify-content: center;
+        text-align: center;
+      }
+
+      .hero-social {
+        justify-content: flex-start;
+      }
+
+      .skills-list {
+        justify-content: flex-start;
       }
     }
 
