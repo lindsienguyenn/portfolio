@@ -1090,10 +1090,10 @@
   
   <script>
     // Update date
+    const lastUpdated = new Date('2025-02-02'); // Change this date when you update
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('last-updated').textContent =
-      'Last updated: ' + new Date().toLocaleDateString(undefined, options);
-
+    document.getElementById('last-updated').textContent = 'Last updated: ' + lastUpdated.toLocaleDateString(undefined, options);
+    
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
